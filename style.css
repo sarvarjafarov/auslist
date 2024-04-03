@@ -1,0 +1,21 @@
+#general-info {
+    position: relative;
+    background: url('path_to_your_background_image.jpg') no-repeat center center; 
+    background-size: cover;
+}
+
+#general-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); /* 70% transparent black */
+    z-index: -1;
+}
+
+#general-info .container {
+    position: relative; /* Ensures the text is on top of the overlay */
+    z-index: 1;
+}
